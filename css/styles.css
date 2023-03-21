@@ -68,7 +68,7 @@ img {
 }
 
 section {
-  margin-top: 120px;
+  margin-top: 100px;
   margin-bottom: 120px;
 }
 .container {
@@ -77,15 +77,16 @@ section {
   margin: 0 auto;
 }
 /* Шапка сторінки */
-.header {
+header {
   background: var(--accent-color);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
   display: flex;
   width: 1158px;
   height: 71px;
   padding: 15px;
-  border-bottom: 1px solid var(--border-color);
   align-items: center;
 }
 .header-nav {
@@ -161,7 +162,7 @@ main {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),  url('../images/people-office.jpg');
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),  url('../images/people-office-squoosh.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -306,7 +307,8 @@ main {
   justify-content: center;
   align-items: center;
 }
-.card-icons-list .social-link-icon:hover{
+.card-icons-list .social-link-icon:hover,
+.card-icons-list .social-link-icon:focus{
   background-color: var(--color-hover-focus);
 }
 /* Секція Customers */
@@ -328,20 +330,16 @@ main {
   justify-content: center;
   outline: transparent;
 }
-.customers-icon-link{
-  color: #8E8F99;
-}
 .logo-icon{
   color: currentColor;
 } 
-
-.customers-icon-list .logo-icon:hover ,
-.customers-icon-list .logo-icon:focus{
-  fill: var(--color-hover-focus);
-}
 .customers-icon-list .customers-icon:hover,
-.customers-icon-list .customers-icon:hover{
+.customers-icon-list .customers-icon:focus{
   border: 1px solid var(--color-hover-focus);
+} 
+.customers-icon:hover .logo-icon,
+.customers-icon:focus .logo-icon{
+  fill: var(--color-hover-focus);
 }
 
 /* Підвал сторінки */
@@ -381,9 +379,10 @@ main {
   height: 40px;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  outline: transparent;
 }
-.card-icons-list .social-link-icon-footer:hover{
+.card-icons-list .social-link-icon-footer:hover,
+.card-icons-list .social-link-icon-footer:focus{
   background-color: #31D0AA;
 }
 
@@ -426,7 +425,12 @@ footer {
 .card-item {
   flex-basis: calc((100% - 48px) / 3);
 }
-.card-set .card-item:hover{
+.card-item-link{
+  display: block;
+  outline: transparent;
+}
+.card-set .card-item-link:hover,
+.card-set .card-item-link:focus{
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .card-text {
